@@ -1,0 +1,171 @@
+.welcome {
+  letter-spacing: 4px;
+  position: absolute;
+  top: 60px;
+  left: 340px;
+  font-family: "Lobster";
+  padding: 10px;
+  margin: 0px auto;
+}
+
+.introducing p {
+  margin-top: 80px;
+  margin-bottom: 0px;
+}
+
+.introducing,
+.skilldiv,
+.infodiv,
+.experiencediv,
+.fundiv,
+.servicediv {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  padding: 50px;
+  border: 1px solid white;
+}
+
+.bold-words {
+  font-weight: 700;
+  color: rgb(255, 187, 0);
+}
+
+.lang,
+.framework,
+.tools,
+.softskills {
+  letter-spacing: 0px;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85px;
+  background: #2f2e33;
+  border: 1px solid white;
+  transition: all 0.3s;
+}
+
+.lang svg,
+.framework svg,
+.tools svg,
+.softskills svg {
+  font-size: 30px;
+  margin-right: 10px;
+  color: rgb(255, 187, 0);
+  transition: all 0.3s;
+}
+
+.lang:hover,
+.framework:hover,
+.tools:hover,
+.softskills:hover {
+  background-color: #54535c;
+}
+
+.lang:hover svg,
+.framework:hover svg,
+.tools:hover svg,
+.softskills:hover svg {
+  color: rgb(255, 115, 0);
+  transition: all 0.3s;
+}
+
+.compsDiv > div {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px;
+  justify-content: space-around;
+}
+
+.infodiv p {
+  margin-left: 30px;
+}
+
+.infos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.infos svg {
+  font-size: 25px;
+  color: rgb(255, 187, 0);
+}
+
+.servicediv {
+  display: flex;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  margin: 50px;
+  background-color: #2f2e33;
+  border: 1px solid white;
+}
+
+.service svg {
+  color: rgb(255, 187, 0);
+  font-size: 30px;
+}
+
+.service p:last-child {
+  line-height: normal;
+  margin: 0px;
+  font-size: 20px;
+  color: rgb(196, 196, 196);
+}
+
+.diplomediv {
+  display: flex;
+}
+
+.diplome {
+  background-color: #2f2e33;
+  border: 1px solid white;
+  padding: 15px;
+  margin: 15px;
+}
+
+.fundiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.fundiv div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2f2e33;
+  margin: 15px;
+  border: 1px solid white;
+  padding: 25px;
+}
+
+.fundiv svg {
+  font-size: 35px;
+  padding: 15px;
+  border: 1px solid rgb(255, 187, 0);
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px white;
+  color: rgb(255, 187, 0);
+}
+
+.fundiv .hobby-desc {
+  font-size: 16px;
+}
+
+.copyright {
+  width: 250px;
+  border: 1px solid gray;
+  padding: 15px;
+  text-align: center;
+  margin: 10px auto;
+}
