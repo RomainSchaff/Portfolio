@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import "./Portfolio.css";
+import "./Portfolio.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { StyledLink } from "../../components/Header/Header";
+import { StyledLink } from "../../components/Navbar/Navbar";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import Slideshow from "../../components/Slider/Slider";
 import { Images } from "../../components/portfolioImage/portfolio";
@@ -12,16 +12,26 @@ const StyledSite = styled.div`
   flex-direction: column;
   align-items: flex-start;
   min-height: 75vh;
-  padding: 100px 8%;
+  padding: 100px 8% 0 8%;
+  @media (max-width: 1200px) {
+    margin-right: 0px;
+    align-items: center;
+    padding: 50px 0 0 0;
+  }
   ${(props) =>
     props.$isFirstSite &&
     `
-    
     `}
   ${(props) =>
     props.$isSecondSite &&
     `
     align-items: flex-end;
+    @media (max-width: 1200px) {
+      .project-container{
+      flex-direction: column-reverse;
+    }
+  }
+  }
     `}
   ${(props) =>
     props.$isThirdSite &&
@@ -31,6 +41,11 @@ const StyledSite = styled.div`
     props.$isFourthSite &&
     `
     align-items: flex-end;
+    @media (max-width: 1200px) {
+      .project-container{
+      flex-direction: column-reverse;
+    }
+  }
     `}
   ${(props) =>
     props.$isFifthSite &&
@@ -40,6 +55,11 @@ const StyledSite = styled.div`
     props.$isSixthSite &&
     `
     align-items: flex-end;
+    @media (max-width: 1200px) {
+      .project-container{
+      flex-direction: column-reverse;
+    }
+  }
     `}
 `;
 
@@ -117,9 +137,8 @@ function Portfolio() {
           <Slideshow images={Images.ImagesProjet3} />
           <div className="desc-icones-container">
             <p>
-              Ce projet était pour travailler sur le SEO et l'Accessibilité.{" "}
-              <br />
-              J'ai donc corrigé les erreurs pour correspondre aux critères WCAG.
+              Travail sur le SEO et l'Accessibilité. <br />
+              Correction des erreurs selon les critères WCAG.
             </p>
             <p>
               Outils utilisés: Axe DevTools, LightHouse, Wave Evaluation Tool,

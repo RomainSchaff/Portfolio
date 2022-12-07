@@ -1,0 +1,98 @@
+@import "variables";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* root font-size to rem - correspond to 10px but not in px to authorize user to change default font size of his browser - 1rem = 10px; 10px/16px = 62.5% - 16px default size browser font*/
+  scroll-behavior: smooth;
+  @include respond(tab-land) {
+    // width < 1200 ?
+    font-size: 56.25%; // 1rem = 9px; 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    // width < 900 ?
+    font-size: 50%; // 1rem = 8px; 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    // width > 1800 ?
+    font-size: 75%; // 1rem = 12px; 12/16 = 75%
+  }
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+li {
+  list-style-type: none;
+}
+body {
+  font-weight: $font-weight-regular;
+  line-height: $font-line-height-body;
+  font-size: $font-size-body;
+  background-image: url("../assets/lodyas.png");
+  color: $white-color;
+  margin: 0;
+  min-height: 100vh;
+  font-family: $font-primary; // font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+}
+
+h2 {
+  position: relative;
+  background: linear-gradient(to right, $white-color 50%, $primary-color 50%);
+  background-size: 200%;
+  background-clip: text;
+  color: transparent;
+  padding: 10px;
+  border: 1px solid $white-color;
+  border-radius: 15px 15px 15px 0px;
+  margin: 35px 0px;
+  transition: all 0.3s;
+  overflow: hidden;
+  z-index: 0;
+}
+
+h2:hover {
+  background-position: -100%;
+}
+h3 {
+  padding: 15px;
+  margin: 0;
+  font-family: $font-primary;
+  color: $primary-color;
+  font-size: $font-heading-2;
+  border-top: 2px solid $primary-color;
+  border-left: 2px solid $primary-color;
+  border-right: 2px solid $primary-color;
+}
+
+h4 {
+  font-size: $font-heading-2;
+  margin: 25px 0px;
+}
+
+p {
+  letter-spacing: 1px;
+  font-family: $font-primary;
+  font-size: $font-size-body;
+}

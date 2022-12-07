@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledLink = styled(Link)`
   font-weight: normal;
-  font-size: 25px;
+  font-size: 20px;
   margin: 10px;
   text-decoration: none;
   transition: all 0.3s;
@@ -22,7 +22,7 @@ const StyledLink = styled(Link)`
     :hover{
       color: #1e2a42;
       -webkit-text-stroke: 1px;
-      -webkit-text-stroke-color: rgb(255, 187, 0);
+      -webkit-text-stroke-color: #ec4e20;
     }
     `}
 `;
@@ -44,3 +44,19 @@ function Links({ page, about }) {
 }
 
 export default Links;
+// function CustomLink({ children, to, ...props }) {
+//   let resolved = useResolvedPath(to);
+//   let match = useMatch({ path: resolved.pathname, end: true });
+
+//   return (
+//     <div>
+//       <Link
+//         className={ `navbar ${match ? "navbarActive" : null}`}
+//         to={to}
+//         {...props}
+//       >
+//         {children}
+//       </Link>
+//       {match && " (active)"}
+//     </div>
+//   );

@@ -1,0 +1,94 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.mobile-menu {
+  display: none;
+}
+.nav-icon {
+  font-size: 40px;
+}
+@include respond(tab-land) {
+  .desktop-menu {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.navbar a {
+  margin: 10px;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  color: $white-color;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+//navbar active
+.navbar a:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #7700ff,
+    #4b00c4,
+    #0099ff,
+    #00d9ff,
+    #00ffd5,
+    #002bff,
+    #1700e4,
+    #e100ff,
+    #7700ff
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.navbar a:active:after {
+  color: $primary-color;
+}
+
+.navbar a:hover:before,
+.navbar a:focus:before {
+  opacity: 0.6;
+}
+
+.navbar a:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #2f2e33;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: #2f2e33;
+  border: 1px solid $white-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  height: 250px;
+  margin: 0;
+  padding: 10px;
+  top: 100%;
+  right: 0px;
+  animation: displayMenu 0.3s;
+}

@@ -1,8 +1,8 @@
 import profil from "../../assets/photoprofil.jpg";
 import styled from "styled-components";
-import "./About.css";
+import "./About.scss";
 import Links from "../../components/Routes/Links";
-import { StyledLink } from "../../components/Header/Header";
+import { StyledLink } from "../../components/Navbar/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMessage,
@@ -30,7 +30,7 @@ import {
 
 const StyledProfil = styled.img`
   float: left;
-  height: 420px;
+  height: 360px;
   width: 250px;
   margin-right: 30px;
   border: 4px solid white;
@@ -38,14 +38,20 @@ const StyledProfil = styled.img`
   :hover {
     transform: scale(1.05);
   }
+  @media (max-width: 800px) {
+    float: none;
+    margin-right: 0px;
+  }
 `;
 
 const StyledAbout = styled.div`
   font-size: 22px;
   font-style: bold;
   display: flex;
+  flex-wrap: wrap;
   width: auto;
-  padding: 200px 150px 100px 150px;
+  margin: 0px;
+  padding: 150px 15% 100px 15%;
   transition: all 0.5s;
   ${(props) =>
     props.$isNextDiv &&
@@ -55,6 +61,12 @@ const StyledAbout = styled.div`
     flex-direction: column;
     align-items: flex-start;
     `}
+  @media(max-width: 1200px) {
+    padding: 150px 10% 50px 10%;
+  }
+  @media (max-width: 800px) {
+    padding: 150px 3% 50px 3%;
+  }
 `;
 
 const StyledPresentation = styled.p`
@@ -70,12 +82,13 @@ function Home() {
     <>
       <StyledAbout>
         <div className="introducing">
+          <p className="welcome">Bienvenue !</p>
           <StyledProfil src={profil} alt="PhotoDeProfil" />
-          <h2 className="welcome">Bonjour et bienvenue !</h2>
           <p>
-            <br /> Je suis <span className="bold-words">Romain Schaff</span>,
+            <br /> Je suis <span className="bold-words">R</span>omain{" "}
+            <span className="bold-words">S</span>chaff,
             <br />
-            développeur <span className="bold-words">Fullstack</span> junior.
+            développeur fullstack junior.
             <br />
             <br />
             J'aime coder et donner vie à des maquettes.
@@ -90,7 +103,7 @@ function Home() {
             si vous le souhaitez.
             <br />
             <br />
-            Si mon profil vous intéresse ou pour simplement dire bonjour
+            Si mon profil vous intéresse ou pour simplement discuter
             <StyledLink href="mailto:romainschaff2612@gmail.com" $isAboutLink>
               contactez-moi.
             </StyledLink>
@@ -201,21 +214,18 @@ function Home() {
         <div className="experiencediv">
           <h4>Diplômes</h4>
           <div className="diplomediv">
-            <p className="diplome">
-              Titre RNCP équivalent Bac+2 après ma formation chez Openclassroom.
-            </p>
-            <p className="diplome">
-              Bac Scientifique au lycée Albert Triboulet à Romans-sur-Isère dans
-              la drôme.
-            </p>
-            <p className="diplome">
-              Première année de Licence de physique-chimie à l'université Joseph
-              Fourier à Valence.
-            </p>
-          </div>
-          <h4>Projets Professionnels</h4>
-          <div className="diplomediv">
-            <p className="diplome">Plusieurs projets de dévoppement web</p>
+            <div className="diplome">
+              <p>Titre RNCP avec Openclassroom</p>
+              <p>Formation développeur web équivalent Bac+2.</p>
+            </div>
+            <div className="diplome">
+              <p>Bac Scientifique</p>
+              <p>Au lycée Albert Triboulet à Romans-sur-Isère dans la drôme.</p>
+            </div>
+            <div className="diplome">
+              <p>Licence 1 de physique-chimie</p>
+              <p>A l'université Joseph Fourier à Valence.</p>
+            </div>
           </div>
         </div>
       </StyledAbout>

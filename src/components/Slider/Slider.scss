@@ -1,17 +1,25 @@
+@import "../../sass/variables";
+
 .containerSlide {
-  background-color: #2f2e33;
   text-align: center;
+  background-color: #2f2e33;
   width: 650px;
   height: 350px;
-  margin: auto;
   padding: 15px;
   border-radius: 25px;
 }
 
+@media (max-width: 1200px) {
+  .containerSlide {
+    border-radius: 0px;
+    width: 100vw;
+  }
+}
+
 .eachSlide {
-  margin: 0 auto;
+  margin: auto;
 }
 
 .react-slideshow-container + ul.indicators .each-slideshow-indicator:before {
-  background: white;
+  background: #ec4e20;
 }
