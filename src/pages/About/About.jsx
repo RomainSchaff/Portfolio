@@ -2,7 +2,7 @@ import profil from "../../assets/photoprofil.jpg";
 import styled from "styled-components";
 import "./About.scss";
 import Links from "../../components/Routes/Links";
-import { StyledLink } from "../../components/Navbar/Navbar";
+import StyledHTMLlinka from "../../components/utils/Styledlink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMessage,
@@ -104,9 +104,12 @@ function Home() {
             <br />
             <br />
             Si mon profil vous intéresse ou pour simplement discuter
-            <StyledLink href="mailto:romainschaff2612@gmail.com" $isAboutLink>
+            <StyledHTMLlinka
+              url="mailto:romainschaff2612@gmail.com"
+              name="aboutLink"
+            >
               contactez-moi.
-            </StyledLink>
+            </StyledHTMLlinka>
           </p>
         </div>
       </StyledAbout>
@@ -165,16 +168,16 @@ function Home() {
             <h4>Soft skills</h4>
             <div>
               <p>
-                <span className="softskills">Détermination</span>
+                <span className="softskills">Persévérant</span>
               </p>
               <p>
-                <span className="softskills">Curiosité</span>
+                <span className="softskills">Curieux</span>
               </p>
               <p>
-                <span className="softskills">Solidarité</span>
+                <span className="softskills">Solidaire</span>
               </p>
               <p>
-                <span className="softskills">Autonomie</span>
+                <span className="softskills">Autonome</span>
               </p>
             </div>
           </div>
@@ -199,9 +202,12 @@ function Home() {
             </StyledPresentation>
             <StyledPresentation>
               <FontAwesomeIcon icon={faEnvelope} />{" "}
-              <StyledLink href="mailto:romainschaff2612@gmail.com" $isAboutLink>
+              <StyledHTMLlinka
+                url="mailto:romainschaff2612@gmail.com"
+                name="aboutLink"
+              >
                 romainschaff2612@gmail.com
-              </StyledLink>
+              </StyledHTMLlinka>
             </StyledPresentation>
             <StyledPresentation>
               <FontAwesomeIcon icon={faMessage} /> 06 45 99 05 14

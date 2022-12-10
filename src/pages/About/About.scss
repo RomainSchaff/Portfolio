@@ -126,18 +126,18 @@
 
 .infos {
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-}
-
-.infos p {
-  font-size: 16px;
-  margin: 5px;
-  overflow: hidden;
-}
-
-.infos svg {
-  font-size: 25px;
-  color: $primary-color;
+  margin: 25px auto;
+  p {
+    font-size: 16px;
+    margin: 5px;
+    overflow: hidden;
+  }
+  svg {
+    font-size: 25px;
+    color: $primary-color;
+  }
 }
 
 .service {
@@ -149,22 +149,20 @@
   margin: 15px;
   background-color: #2f2e33;
   border: 1px solid $white-color;
-}
-
-.service svg {
-  color: $primary-color;
-  font-size: 30px;
-}
-
-.service p {
-  text-align: center;
-}
-
-.service p:last-child {
-  line-height: normal;
-  margin: 0px;
-  font-size: 20px;
-  color: rgb(196, 196, 196);
+  p {
+    text-align: center;
+    &:last-child {
+      line-height: normal;
+      margin: 0px;
+      font-size: 20px;
+      color: rgb(199, 199, 199);
+      margin-top: 10px;
+    }
+  }
+  svg {
+    color: $primary-color;
+    font-size: 35px;
+  }
 }
 
 .diplomediv {

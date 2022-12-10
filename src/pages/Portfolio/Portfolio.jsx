@@ -2,7 +2,7 @@ import styled from "styled-components";
 import "./Portfolio.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { StyledLink } from "../../components/Navbar/Navbar";
+import StyledHTMLlinka from "../../components/utils/Styledlink";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import Slideshow from "../../components/Slider/Slider";
 import { Images } from "../../components/portfolioImage/portfolio";
@@ -78,22 +78,15 @@ function Portfolio() {
             </p>
             <p>Langages utilisés: HTML, CSS</p>
             <div>
-              <StyledLink
-                $isIconLink
-                href="https://romainschaff.github.io/RomainSchaff_2_08032021/#h%C3%A9bergements"
-                target="_blank"
-                rel="noreferrer"
+              <StyledHTMLlinka
+                url="https://romainschaff.github.io/RomainSchaff_2_08032021/#h%C3%A9bergements"
+                name="aboutLink"
               >
                 <FontAwesomeIcon icon={faEye} className="link" />
-              </StyledLink>
-              <StyledLink
-                $isIconLink
-                href="https://github.com/RomainSchaff/RomainSchaff_2_08032021"
-                target="_blank"
-                rel="noreferrer"
-              >
+              </StyledHTMLlinka>
+              <StyledHTMLlinka url="https://github.com/RomainSchaff/RomainSchaff_2_08032021">
                 <FontAwesomeIcon icon={faGithub} className="link" />
-              </StyledLink>
+              </StyledHTMLlinka>
             </div>
           </div>
         </div>
@@ -110,22 +103,12 @@ function Portfolio() {
             </p>
             <p>Langages utilisés: HTML, CSS, Sass</p>
             <div>
-              <StyledLink
-                $isIconLink
-                href="https://romainschaff.github.io/RomainSchaff_3_01042021/index.html"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <StyledHTMLlinka url="https://romainschaff.github.io/RomainSchaff_3_01042021/index.html">
                 <FontAwesomeIcon icon={faEye} className="link" />
-              </StyledLink>
-              <StyledLink
-                $isIconLink
-                href="https://github.com/RomainSchaff/RomainSchaff_3_01042021"
-                target="_blank"
-                rel="noreferrer"
-              >
+              </StyledHTMLlinka>
+              <StyledHTMLlinka url="https://github.com/RomainSchaff/RomainSchaff_3_01042021">
                 <FontAwesomeIcon icon={faGithub} className="link" />
-              </StyledLink>
+              </StyledHTMLlinka>
             </div>
           </div>
           <Slideshow images={Images.ImagesProjet2} />
@@ -145,22 +128,12 @@ function Portfolio() {
               HeadingsMap
             </p>
             <div>
-              <StyledLink
-                $isIconLink
-                href="https://romainschaff.github.io/RomainSchaff_04_01052021_V2/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <StyledHTMLlinka url="https://romainschaff.github.io/RomainSchaff_04_01052021_V2/">
                 <FontAwesomeIcon icon={faEye} className="link" />
-              </StyledLink>
-              <StyledLink
-                $isIconLink
-                href="https://github.com/RomainSchaff/RomainSchaff_04_01052021_V2"
-                target="_blank"
-                rel="noreferrer"
-              >
+              </StyledHTMLlinka>
+              <StyledHTMLlinka url="https://github.com/RomainSchaff/RomainSchaff_04_01052021_V2">
                 <FontAwesomeIcon icon={faGithub} className="link" />
-              </StyledLink>
+              </StyledHTMLlinka>
             </div>
           </div>
         </div>
@@ -176,22 +149,12 @@ function Portfolio() {
             </p>
             <p>Langages utilisés: JavaScript</p>
             <div>
-              <StyledLink
-                $isIconLink
-                href="https://romainschaff.github.io/RomainSchaff_05_15092021/index.html"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <StyledHTMLlinka url="https://romainschaff.github.io/RomainSchaff_05_15092021/index.html">
                 <FontAwesomeIcon icon={faEye} className="link" />
-              </StyledLink>
-              <StyledLink
-                $isIconLink
-                href="https://github.com/RomainSchaff/RomainSchaff_05_15092021"
-                target="_blank"
-                rel="noreferrer"
-              >
+              </StyledHTMLlinka>
+              <StyledHTMLlinka url="https://github.com/RomainSchaff/RomainSchaff_05_15092021">
                 <FontAwesomeIcon icon={faGithub} className="link" />
-              </StyledLink>
+              </StyledHTMLlinka>
             </div>
           </div>
           <Slideshow images={Images.ImagesProjet4} />
@@ -210,14 +173,9 @@ function Portfolio() {
             <p>Langages utilisés: JavaScript avec NodeJS</p>
             <p>Base de donnée: MongoDB</p>
             <div>
-              <StyledLink
-                $isIconLink
-                href="https://github.com/RomainSchaff/RomainSchaff_P6"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <StyledHTMLlinka url="https://github.com/RomainSchaff/RomainSchaff_P6">
                 <FontAwesomeIcon icon={faGithub} className="link" />
-              </StyledLink>
+              </StyledHTMLlinka>
             </div>
           </div>
         </div>
@@ -235,14 +193,9 @@ function Portfolio() {
             <p>Langages utilisés: JavaScript avec ReactJS</p>
             <p>Base de donnée: SQL (mySQL)</p>
             <div>
-              <StyledLink
-                $isIconLink
-                href="https://github.com/RomainSchaff/RomainSchaff_07_11122021"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <StyledHTMLlinka url="https://github.com/RomainSchaff/RomainSchaff_07_11122021">
                 <FontAwesomeIcon icon={faGithub} className="link" />
-              </StyledLink>
+              </StyledHTMLlinka>
             </div>
           </div>
           <Slideshow images={Images.ImagesProjet6} />

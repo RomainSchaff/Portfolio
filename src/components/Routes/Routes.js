@@ -6,7 +6,7 @@ function Router() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<About />} />
+        <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/*" element={<About />} />
       </Routes>

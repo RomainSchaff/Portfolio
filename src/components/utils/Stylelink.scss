@@ -1,0 +1,16 @@
+@import "../../sass/variables";
+
+a {
+  transition: all 0.3s;
+  margin: 10px;
+}
+
+.aboutLink {
+  font-weight: normal;
+  color: white;
+  text-decoration: underline;
+  &:hover {
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #ec4e20;
+  }
+}

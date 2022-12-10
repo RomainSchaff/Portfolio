@@ -28,14 +28,15 @@ const StyledLink = styled(Link)`
 `;
 
 function Links({ page, about }) {
+  let page2 = page?.toLowerCase();
   return (
     <>
       {about ? (
-        <StyledLink to={page ? "/" + page : "/"}>
+        <StyledLink to={page2 ? "/" + page2 : "/"}>
           {page ? page : "About"}
         </StyledLink>
       ) : (
-        <StyledLink to={page ? "/" + page : "/"} $isAboutLink>
+        <StyledLink to={page2 ? "/" + page2 : "/"} $isAboutLink>
           {page ? page : "About"}
         </StyledLink>
       )}
